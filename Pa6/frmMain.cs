@@ -10,27 +10,28 @@ using System.Windows.Forms;
 
 namespace Pa6
 {
-    public partial class frmCWID : Form
+    public partial class frmMain : Form
     {
-        public frmCWID()
+        string cwid;
+        List<Book> myBooks;
+        public frmMain(string tempCwid)
         {
+            this.cwid = tempCwid;
             InitializeComponent();
         }
 
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            LoadList();
+        }
+        private void LoadList()
+        {
+            myBooks = BookFile.GetAllBooks(cwid);
+            lstBooks.DataSource = myBooks;
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void BtnOk_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmMain myForm = new frmMain(cwidBox.Text); 
-            if (myForm.ShowDialog() == DialogResult.OK)
-            {
-
-            } 
-            else { this.Close(); }
         }
     }
 }
