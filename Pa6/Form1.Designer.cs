@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BtnOk = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.cwidBox = new System.Windows.Forms.TextBox();
+            this.txtCWID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -63,19 +63,20 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // cwidBox
+            // txtCWID
             // 
-            this.cwidBox.Location = new System.Drawing.Point(162, 44);
-            this.cwidBox.Name = "cwidBox";
-            this.cwidBox.Size = new System.Drawing.Size(146, 26);
-            this.cwidBox.TabIndex = 4;
+            this.txtCWID.Location = new System.Drawing.Point(162, 44);
+            this.txtCWID.Name = "txtCWID";
+            this.txtCWID.Size = new System.Drawing.Size(146, 26);
+            this.txtCWID.TabIndex = 4;
+          
             // 
             // frmCWID
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(373, 155);
-            this.Controls.Add(this.cwidBox);
+            this.Controls.Add(this.txtCWID);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.BtnOk);
             this.Controls.Add(this.label1);
@@ -93,7 +94,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnOk;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.TextBox cwidBox;
+        private System.Windows.Forms.TextBox txtCWID;
     }
 }
 

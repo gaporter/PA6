@@ -23,6 +23,7 @@ namespace Pa6
         private void frmMain_Load(object sender, EventArgs e)
         {
             LoadList();
+            
         }
         private void LoadList()
         {
@@ -32,6 +33,19 @@ namespace Pa6
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void lstBooks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Book myBook = (Book)lstBooks.SelectedItem;
+
+            txtTitleData.Text = myBook.title;
+            txtAuthorData.Text = myBook.author;
+            txtGenreData.Text = myBook.genre;
+            txtCopiesData.Text = myBook.copies.ToString();
+            txtLengthData.Text = myBook.length.ToString();
+
+
         }
     }
 }
